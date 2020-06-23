@@ -1,0 +1,40 @@
+:root{
+  background:black;  
+  filter:url(#noise) contrast(110%);
+}
+
+.centered{
+  position:absolute;
+  left:50vw;
+  top:50vh;
+  transform:translateX(-50%) translateY(-50%);
+  text-align:center;
+}
+
+.hauser{
+  
+  color:white;
+  font-family:'Hauser';
+  font-size:40vh;
+  padding:0 1em;
+  filter:url(#outerGlow);
+}
+
+.hauser:after{
+  content:attr(data-text);
+  position:absolute;
+  left:0;
+  padding:0 1em;
+  filter: url(#frontGradient) url(#backGradient) url(#innerGlow) url(#stroke);
+}
+
+.streamster{
+  color:magenta;
+  font-family:'Streamster';
+  font-size:40pt;
+  filter:url(#bevel) url(#outerGlow);
+  transform:translateY(10pt) rotate(-10deg);
+  z-index:999;
+  position:relative;
+  padding: 150px 0 0 150px;
+}
